@@ -6,6 +6,7 @@
 	min-width: 170px;
 	border: none;
 	border-radius: 28px;
+	font-family: inherit;
 	font-size: 1.8rem;
 	line-height: 53px;
 	vertical-align: top;
@@ -18,3 +19,9 @@
 	color: #fff;
 	background: #48B071;
 }
+
+.btn-secondary {
+    color: #3C3C3B;
+    background: #fff;
+}
+

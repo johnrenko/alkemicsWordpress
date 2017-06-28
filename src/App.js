@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-import Button from "./Components/Nav";
+import Infoblock from "./Components/Infoblock";
 
 class App extends Component {
   render() {
     return (
-      <Button />
+      <Infoblock />
     );
   }
 }

@@ -1,0 +1,12 @@
+i {
+	display: block;
+    margin: 0 auto 24px;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+    border-radius: 36px;
+    background-color: #48B071;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
