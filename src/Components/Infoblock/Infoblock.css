@@ -9,4 +9,16 @@ i {
     background-color: #48B071;
     background-position: center center;
     background-repeat: no-repeat;
+    background-size: 22px auto;
+}
+
+.infoblock h2 {
+    text-align: center;
+}
+
+.infoblock p {
+    color: #75798A;
+    font-size: 1.4rem;
+    line-height: 28px;
+    text-align: center;
 }

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+
 import "./Infoblock.css";
 
 class Infoblock extends Component {
@@ -21,13 +22,13 @@ class Infoblock extends Component {
 
 	render() {
 		const { icon, title, content } = this.props;
-
+		console.log(process.env.PUBLIC_URL)
 		return (
-			<div>
+			<div className="infoblock">
 				<i
 					className="ico"
 					style={{
-						backgroundImage: "url(./img/ico-" + icon + ".svg)"
+						backgroundImage: 'url('+process.env.PUBLIC_URL+'/'+icon+'.svg)'
 					}}
 				/>
 				<h2>{title}</h2>
@@ -38,5 +39,4 @@ class Infoblock extends Component {
 		);
 	}
 }
-
 export default Infoblock;

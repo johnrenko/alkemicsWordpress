@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import Infoblock from "./Components/Infoblock";
+import Infoblocks from "./Modules/Infoblocks";
 
 class App extends Component {
-  render() {
-    return (
-      <Infoblock />
-    );
-  }
+	render() {
+		return <Infoblocks/>	}
 }
 
 export default App;
