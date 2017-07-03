@@ -14,7 +14,7 @@ class Button extends Component {
 	static defaultProps = {
 		onClick: null,
 		primary: false,
-		secondary: true
+		secondary: false
 	};
 
 	getClasses() {
@@ -30,10 +30,11 @@ class Button extends Component {
 		const {
 			primary,
 			secondary,
+			content
 		} = this.props;
 		const classes = this.getClasses();
 
-		return <button className={classNames(classes)}>test</button>;
+		return <button className={classNames(classes)}>{content}</button>;
 	}
 }
 
