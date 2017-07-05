@@ -1,0 +1,24 @@
+.heroHeader {
+	width: 100%;
+    height: auto;
+    background: #3FA2B2;
+    background-image: linear-gradient(to bottom right,#3FA2B2 0,#166A83 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroHeader h2 {
+	margin: 0 0 20px 0;
+    font-size: 3rem;
+    line-height: 1.4em;
+    font-weight: 400;
+    color: #ACE0EB;
+    letter-spacing: 1.25px;
+}
+
+.heroHeader button {
+	position: relative;
+	top: -80px;
+}

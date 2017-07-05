@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
 
+import HeroHeader from "./Modules/heroHeader";
 import Infoblocks from "./Modules/Infoblocks";
-import Button from "./Components/Button";
 
 class App extends Component {
 	render() {
 		return (
 			<div>
+				<HeroHeader />
 				<Infoblocks />
-				<Button primary content="Customers" />
 			</div>
 		);
 	}
