@@ -11,9 +11,9 @@ class Infoblock extends Component {
 	};
 
 	static defaultProps = {
-		icon: "how-it-works-1",
+		icon: "http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/ico-how-it-works-1.svg",
 		title: "",
-		content: ""
+		content: "",
 	};
 
 	getClasses() {
@@ -22,18 +22,18 @@ class Infoblock extends Component {
 
 	render() {
 		const { icon, title, content } = this.props;
-		console.log(process.env.PUBLIC_URL)
+
 		return (
 			<div className="infoblock">
 				<i
 					className="ico"
 					style={{
-						backgroundImage: 'url('+process.env.PUBLIC_URL+'/'+icon+'.svg)'
+						backgroundImage: 'url('+icon+')'
 					}}
 				/>
-				<h2>{title}</h2>
+				<h2>{this.props.title}</h2>
 				<p>
-					{content}
+					{this.props.content}
 				</p>
 			</div>
 		);
