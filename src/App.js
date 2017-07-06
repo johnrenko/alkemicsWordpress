@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import HeroHeader from "./Modules/HeroHeader";
-import ValueBlock from "./Modules/ValueBlock";
+import Homepage from "./Views/Homepage";
 
 class App extends Component {
 	render() {
 		return (
 			<div>
-				<HeroHeader />
-				<ValueBlock />
+				<Homepage />
 			</div>
 		);
 	}

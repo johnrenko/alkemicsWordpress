@@ -1,0 +1,10 @@
+.NavBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	max-width: 1220px;
+	margin: auto;
+	padding-right: 40px;
+	padding-left: 40px;
+	height: 150px;
+}

@@ -1,8 +1,6 @@
 .heroHeader {
 	width: 100%;
     height: auto;
-    background: #3FA2B2;
-    background-image: linear-gradient(to bottom right,#3FA2B2 0,#166A83 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
