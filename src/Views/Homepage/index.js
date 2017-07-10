@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./Homepage.css";
 
+import HeaderAction from "../../Components/HeaderAction";
 import HeroHeader from "../../Modules/HeroHeader";
 import ValueBlock from "../../Modules/ValueBlock";
-import HeaderAction from "../../Components/HeaderAction";
 import NavBar from "../../Modules/NavBar";
+import BoxContent from "../../Modules/BoxContent";
 
 class Homepage extends Component {
 	render() {
@@ -15,6 +16,7 @@ class Homepage extends Component {
 					<HeroHeader />
 				</div>
 				<ValueBlock />
+				<BoxContent />
 			</div>
 		);
 	}

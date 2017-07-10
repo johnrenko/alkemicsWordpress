@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import "./ImgBanner.css";
-import classNames from "classnames";
 
 class ImgBanner extends Component {
 	static propTypes = {
@@ -9,13 +8,31 @@ class ImgBanner extends Component {
 	};
 
 	static defaultProps = {
-		imgs: []
+		imgs: [
+			"http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-auchan.png",
+			"http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-carrefour.png",
+			"http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-casino.png",
+			"http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-e_leclerc.png",
+			"http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-super_u.png",
+			"http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-walmart.png"
+		]
 	};
 
-	render() {
+	renderList() {
 		const { imgs } = this.props;
+		const list = imgs.map(imgLink => (
+				<img src={imgLink} />
+		));
 
-		return null;
+		return list;
+	}
+
+	render() {
+		return (
+			<div className="ImgList">
+					{this.renderList()}
+			</div>
+		);
 	}
 }
 
