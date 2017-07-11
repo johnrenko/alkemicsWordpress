@@ -1,0 +1,51 @@
+.QuoteBlock {
+  padding: 120px 0 100px 0;
+  background: #3fa2b2;
+  background-image: linear-gradient(to bottom right, #3fa2b2 0, #166a83 100%);
+}
+
+.QuoteBlock__content {
+  max-width: 1220px;
+  padding: 0px 40px;
+  margin: auto;
+}
+
+.QuoteBlock .Quote {
+  padding: 0 230px;
+  height: auto;
+  margin: 0 0 40px 0;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.Quote__Quoter {
+  display: flex;
+}
+
+.Quote img {
+  width: 70px;
+  height: 70px;
+  margin-right: 40px;
+}
+
+.Quote__Quoter__Content {
+  flex-direction: column;
+}
+
+.Quote__Name {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.Quote__Role {
+  color: #ace0eb;
+  padding: 10px 0 0 0;
+  margin: 0;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
