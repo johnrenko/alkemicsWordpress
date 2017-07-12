@@ -1,0 +1,24 @@
+i {
+	display: block;
+    margin: 0 auto 24px;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 36px;
+    -moz-border-radius: 36px;
+    border-radius: 36px;
+    background-color: #48B071;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+}
+
+.infoblock h2 {
+    text-align: center;
+}
+
+.infoblock p {
+    color: #75798A;
+    font-size: 1.4rem;
+    line-height: 28px;
+    text-align: center;
+}

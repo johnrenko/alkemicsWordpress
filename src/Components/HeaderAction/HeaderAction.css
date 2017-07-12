@@ -1,0 +1,29 @@
+.headerAction {
+
+}
+
+.headerAction a {
+    margin: 0 0 0 16px;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #4b92a5;
+    border-radius: 28px;
+    font-size: 1.5rem;
+    line-height: 43px;
+    font-weight: 500;
+    color: #fff;
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .2s ease-in-out;
+}
+
+.headerAction a:hover {
+    border-color: #fff;
+}
+
+.headerAction a.language {
+	padding: 10px;
+}

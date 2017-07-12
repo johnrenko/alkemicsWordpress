@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="38px" viewBox="0 0 27 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Brands" transform="translate(-949.000000, -571.000000)" fill-rule="nonzero" fill="#48B071">
+            <g id="Group-14" transform="translate(910.000000, 540.000000)">
+                <g id="media-play-symbol" transform="translate(39.000000, 31.000000)">
+                    <path d="M0.982840149,0.262951872 C1.28184758,0.0877860963 1.61648699,0 1.95162825,0 C2.28586617,0 2.6204052,0.0877860963 2.92071747,0.262951872 L26.0178625,17.2511872 C26.6163792,17.6012139 26.987052,18.249246 26.987052,18.9499091 C26.987052,19.6504706 26.6173829,20.2984011 26.0178625,20.6480214 L2.92071747,37.6369679 C2.3212974,37.9865882 1.58236059,37.9865882 0.983342007,37.6369679 C0.383821561,37.2861283 0.0137509294,36.637893 0.0137509294,35.937738 L0.0137509294,1.96147059 C0.0137509294,1.2612139 0.383219331,0.613283422 0.982840149,0.262951872 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
