@@ -1,6 +1,7 @@
 {
   "name": "alkemicsWordpress",
   "version": "0.1.0",
+  "homepage": "http://www.techalkemics.odns.fr/front-website",
   "private": true,
   "devDependencies": {
     "eslint": "~4.2.0",
