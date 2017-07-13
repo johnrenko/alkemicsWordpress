@@ -20,7 +20,9 @@ class ImgBanner extends Component {
 
   renderList() {
     const { imgs } = this.props;
-    const list = imgs.map(imgLink => <img src={imgLink} key={imgLink} />);
+    const list = imgs.map(imgLink =>
+      <img src={imgLink} key={imgLink} alt="retailerLogo" />
+    );
 
     return list;
   }

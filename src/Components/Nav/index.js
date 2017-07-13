@@ -27,14 +27,11 @@ class Nav extends Component {
       </li>
     );
     return (
-      <Router>
-        <div>
-          <ul className="nav">
-            {nav}
-          </ul>
-          <Route path={links[0][1]} />
-        </div>
-      </Router>
+      <div>
+        <ul className="nav">
+          {nav}
+        </ul>
+      </div>
     );
   }
 }

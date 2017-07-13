@@ -1,16 +1,25 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import './App.css';
 
-import Homepage from "./Views/Homepage";
+import Homepage from './Views/Homepage';
 
 class App extends Component {
-	render() {
-		return (
-			<div>
-				<Homepage />
-			</div>
-		);
-	}
+  render() {
+    const home = () => {
+      return <Homepage />;
+    };
+    return (
+      <Router>
+        <div>
+          <Route exact path="/" component={home} />
+          <Route exact path="/brands" component={home} />
+          <Route exact path="/" component={home} />
+          <Route exact path="/" component={home} />
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
