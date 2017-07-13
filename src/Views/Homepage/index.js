@@ -16,6 +16,11 @@ class Homepage extends Component {
       subtitle: '',
       heroImage: '',
       ctaText: '',
+      boxTitle: '',
+      boxContent: '',
+      boxMainCTA: '',
+      boxSecondCTA: '',
+      boxImgs: [],
     };
   }
 
@@ -27,6 +32,18 @@ class Homepage extends Component {
         subtitle: res[0].acf.subtitle,
         heroImage: res[0].acf.heroimage,
         ctaText: res[0].acf.cta_top,
+        boxTitle: res[0].acf.card_title,
+        boxContent: res[0].acf.card_subtitle,
+        boxMainCTA: res[0].acf.card_main_cta,
+        boxSecondCTA: res[0].acf.card_second_cta,
+        boxImgs: [
+          res[0].acf.logo_1,
+          res[0].acf.logo_2,
+          res[0].acf.logo_3,
+          res[0].acf.logo_4,
+          res[0].acf.logo_5,
+          res[0].acf.logo_6,
+        ],
       });
     });
   }
@@ -45,7 +62,13 @@ class Homepage extends Component {
           />
         </div>
         <ValueBlock />
-        <BoxContent />
+        <BoxContent
+          title={this.state.boxTitle}
+          content={this.state.boxContent}
+          mainCTA={this.state.boxMainCTA}
+          secondCTA={this.state.boxSecondCTA}
+          imgs={this.state.boxImgs}
+        />
         <Quote />
       </div>
     );
