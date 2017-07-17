@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 import Nav from '../../Components/Nav';
@@ -10,7 +11,9 @@ class NavBar extends Component {
   render() {
     return (
       <div className="NavBar">
-        <img src={logo} />
+        <Link to="/">
+          <img src={logo} />
+        </Link>
         <Nav />
         <HeaderAction />
       </div>

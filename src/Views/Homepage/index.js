@@ -11,6 +11,7 @@ class Homepage extends Component {
   constructor() {
     super();
     this.state = {
+      loaded: false,
       title: '',
       subtitle: '',
       heroImage: '',
@@ -31,96 +32,101 @@ class Homepage extends Component {
   }
 
   componentDidMount() {
-    let dataURL = 'http://www.techalkemics.odns.fr/wp-json/wp/v2/pages';
+    let dataURL = 'http://www.techalkemics.odns.fr/wp-json/wp/v2/pages/2';
     fetch(dataURL).then(res => res.json()).then(res => {
       this.setState({
-        title: res[0].acf.title,
-        subtitle: res[0].acf.subtitle,
-        heroImage: res[0].acf.heroimage,
-        ctaText: res[0].acf.cta_top,
-        boxTitle: res[0].acf.card_title,
-        boxContent: res[0].acf.card_subtitle,
-        boxMainCTA: res[0].acf.card_main_cta,
-        boxSecondCTA: res[0].acf.card_second_cta,
+        loaded: true,
+        title: res.acf.title,
+        subtitle: res.acf.subtitle,
+        heroImage: res.acf.heroimage,
+        ctaText: res.acf.cta_top,
+        boxTitle: res.acf.card_title,
+        boxContent: res.acf.card_subtitle,
+        boxMainCTA: res.acf.card_main_cta,
+        boxSecondCTA: res.acf.card_second_cta,
         boxImgs: [
-          res[0].acf.logo_1,
-          res[0].acf.logo_2,
-          res[0].acf.logo_3,
-          res[0].acf.logo_4,
-          res[0].acf.logo_5,
-          res[0].acf.logo_6,
+          res.acf.logo_1,
+          res.acf.logo_2,
+          res.acf.logo_3,
+          res.acf.logo_4,
+          res.acf.logo_5,
+          res.acf.logo_6,
         ],
         blockContent: {
           data: [
             {
-              title: res[0].acf.block_2_title_1,
-              content: res[0].acf.block_2_content_1,
-              icon: res[0].acf.block_2_icon_1.url,
-              id: res[0].acf.block_2_icon_1.id,
+              title: res.acf.block_2_title_1,
+              content: res.acf.block_2_content_1,
+              icon: res.acf.block_2_icon_1.url,
+              id: res.acf.block_2_icon_1.id,
             },
             {
-              title: res[0].acf.block_2_title_2,
-              content: res[0].acf.block_2_content_2,
-              icon: res[0].acf.block_2_icon_2.url,
-              id: res[0].acf.block_2_icon_2.id,
+              title: res.acf.block_2_title_2,
+              content: res.acf.block_2_content_2,
+              icon: res.acf.block_2_icon_2.url,
+              id: res.acf.block_2_icon_2.id,
             },
             {
-              title: res[0].acf.block_2_title_3,
-              content: res[0].acf.block_2_content_3,
-              icon: res[0].acf.block_2_icon_3.url,
-              id: res[0].acf.block_2_icon_3.id,
+              title: res.acf.block_2_title_3,
+              content: res.acf.block_2_content_3,
+              icon: res.acf.block_2_icon_3.url,
+              id: res.acf.block_2_icon_3.id,
             },
             {
-              title: res[0].acf.block_2_title_4,
-              content: res[0].acf.block_2_content_4,
-              icon: res[0].acf.block_2_icon_4.url,
-              id: res[0].acf.block_2_icon_4.id,
+              title: res.acf.block_2_title_4,
+              content: res.acf.block_2_content_4,
+              icon: res.acf.block_2_icon_4.url,
+              id: res.acf.block_2_icon_4.id,
             },
           ],
         },
-        valueTitle: res[0].acf.block_2_title,
-        cta2: res[0].acf.cta_2,
-        quoteContent: res[0].acf.quote,
-        quotepic: res[0].acf.quote_image,
-        quoteName: res[0].acf.quote_name,
-        quoteRole: res[0].acf.quote_title,
+        valueTitle: res.acf.block_2_title,
+        cta2: res.acf.cta_2,
+        quoteContent: res.acf.quote,
+        quotepic: res.acf.quote_image,
+        quoteName: res.acf.quote_name,
+        quoteRole: res.acf.quote_title,
       });
     });
   }
 
   render() {
-    return (
-      <div>
-        <div className="NavHeader">
-          <NavBar />
-          <HeroHeader
-            title={this.state.title}
-            subtitle={this.state.subtitle}
-            heroImage={this.state.heroImage}
-            ctaText={this.state.ctaText}
-            ctaLink=""
+    if (this.state.loaded) {
+      return (
+        <div>
+          <div className="NavHeader">
+            <NavBar />
+            <HeroHeader
+              title={this.state.title}
+              subtitle={this.state.subtitle}
+              heroImage={this.state.heroImage}
+              ctaText={this.state.ctaText}
+              ctaLink=""
+            />
+          </div>
+          <ValueBlock
+            valueTitle={this.state.valueTitle}
+            blocksToRender={this.state.blockContent}
+            cta2={this.state.cta2}
+          />
+          <BoxContent
+            title={this.state.boxTitle}
+            content={this.state.boxContent}
+            mainCTA={this.state.boxMainCTA}
+            secondCTA={this.state.boxSecondCTA}
+            imgs={this.state.boxImgs}
+          />
+          <Quote
+            quote={this.state.quoteContent}
+            pic={this.state.quotepic}
+            name={this.state.quoteName}
+            role={this.state.quoteRole}
           />
         </div>
-        <ValueBlock
-          valueTitle={this.state.valueTitle}
-          blocksToRender={this.state.blockContent}
-          cta2={this.state.cta2}
-        />
-        <BoxContent
-          title={this.state.boxTitle}
-          content={this.state.boxContent}
-          mainCTA={this.state.boxMainCTA}
-          secondCTA={this.state.boxSecondCTA}
-          imgs={this.state.boxImgs}
-        />
-        <Quote
-          quote={this.state.quoteContent}
-          pic={this.state.quotepic}
-          name={this.state.quoteName}
-          role={this.state.quoteRole}
-        />
-      </div>
-    );
+      );
+    } else {
+      return <div className="Loader">Loading...</div>;
+    }
   }
 }
 
