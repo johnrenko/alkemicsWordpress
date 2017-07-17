@@ -15,11 +15,18 @@ class Homepage extends Component {
       subtitle: '',
       heroImage: '',
       ctaText: '',
+      valueTitle: '',
+      blockContent: { data: [] },
+      cta2: '',
       boxTitle: '',
       boxContent: '',
       boxMainCTA: '',
       boxSecondCTA: '',
       boxImgs: [],
+      quoteContent: '',
+      quotepic: '',
+      quoteName: '',
+      quoteRole: '',
     };
   }
 
@@ -43,6 +50,40 @@ class Homepage extends Component {
           res[0].acf.logo_5,
           res[0].acf.logo_6,
         ],
+        blockContent: {
+          data: [
+            {
+              title: res[0].acf.block_2_title_1,
+              content: res[0].acf.block_2_content_1,
+              icon: res[0].acf.block_2_icon_1.url,
+              id: res[0].acf.block_2_icon_1.id,
+            },
+            {
+              title: res[0].acf.block_2_title_2,
+              content: res[0].acf.block_2_content_2,
+              icon: res[0].acf.block_2_icon_2.url,
+              id: res[0].acf.block_2_icon_2.id,
+            },
+            {
+              title: res[0].acf.block_2_title_3,
+              content: res[0].acf.block_2_content_3,
+              icon: res[0].acf.block_2_icon_3.url,
+              id: res[0].acf.block_2_icon_3.id,
+            },
+            {
+              title: res[0].acf.block_2_title_4,
+              content: res[0].acf.block_2_content_4,
+              icon: res[0].acf.block_2_icon_4.url,
+              id: res[0].acf.block_2_icon_4.id,
+            },
+          ],
+        },
+        valueTitle: res[0].acf.block_2_title,
+        cta2: res[0].acf.cta_2,
+        quoteContent: res[0].acf.quote,
+        quotepic: res[0].acf.quote_image,
+        quoteName: res[0].acf.quote_name,
+        quoteRole: res[0].acf.quote_title,
       });
     });
   }
@@ -60,7 +101,11 @@ class Homepage extends Component {
             ctaLink=""
           />
         </div>
-        <ValueBlock />
+        <ValueBlock
+          valueTitle={this.state.valueTitle}
+          blocksToRender={this.state.blockContent}
+          cta2={this.state.cta2}
+        />
         <BoxContent
           title={this.state.boxTitle}
           content={this.state.boxContent}
@@ -68,7 +113,12 @@ class Homepage extends Component {
           secondCTA={this.state.boxSecondCTA}
           imgs={this.state.boxImgs}
         />
-        <Quote />
+        <Quote
+          quote={this.state.quoteContent}
+          pic={this.state.quotepic}
+          name={this.state.quoteName}
+          role={this.state.quoteRole}
+        />
       </div>
     );
   }
