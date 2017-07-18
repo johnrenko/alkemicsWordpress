@@ -92,8 +92,6 @@ class Brands extends Component {
             title={this.state.title}
             subtitle={this.state.subtitle}
             heroImage={this.state.heroImage}
-            ctaText={this.state.ctaText}
-            ctaLink=""
           />
         </div>
         <div className="ImgBanner">

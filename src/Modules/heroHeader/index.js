@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Button from '../../Components/Button';
+import ReactPlayer from 'react-player';
 
 import './HeroHeader.css';
 
@@ -28,18 +29,16 @@ class HeroHeader extends Component {
     }
   }
 
-  renderImage() {
-    return (
-      <div className="videoContent">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/ntEn4Xe_lKw"
-          frameborder="0"
-          allowfullscreen
-        />
-      </div>
-    );
+  renderImage(url) {
+    if (url.includes('youtube')) {
+      return (
+        <div className="videoContent">
+          <ReactPlayer url={url} width="900px" height="506px" />
+        </div>
+      );
+    } else {
+      return <img src={url} alt="" />;
+    }
   }
 
   render() {

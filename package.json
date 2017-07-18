@@ -12,6 +12,7 @@
     "classnames": "^2.2.5",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-player": "~0.19.1",
     "react-router-dom": "~4.1.1"
   },
   "scripts": {
