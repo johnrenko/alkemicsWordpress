@@ -28,6 +28,20 @@ class HeroHeader extends Component {
     }
   }
 
+  renderImage() {
+    return (
+      <div className="videoContent">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ntEn4Xe_lKw"
+          frameborder="0"
+          allowfullscreen
+        />
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="heroHeader">
@@ -38,7 +52,7 @@ class HeroHeader extends Component {
           {this.props.subtitle}
         </h2>
         <div className="hp-img">
-          <img src={this.props.heroImage} alt="" />
+          {this.renderImage(this.props.heroImage)}
         </div>
         {this.renderButton(this.props.ctaText)}
       </div>

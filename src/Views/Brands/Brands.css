@@ -1,4 +1,10 @@
 .NavHeader {
-    background: #3FA2B2;
-	background-image: linear-gradient(to bottom right,#3FA2B2 0,#166A83 100%);
+  background: #3fa2b2;
+  background-image: linear-gradient(to bottom right, #3fa2b2 0, #166a83 100%);
+}
+
+.ImgBanner {
+  max-width: 1220px;
+  margin: auto;
+  padding: 90px 0 40px 0;
 }

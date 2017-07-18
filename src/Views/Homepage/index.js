@@ -32,7 +32,8 @@ class Homepage extends Component {
   }
 
   componentDidMount() {
-    let dataURL = 'http://www.techalkemics.odns.fr/wp-json/wp/v2/pages/2';
+    let dataURL =
+      'http://www.techalkemics.odns.fr/wordpress_back/wp-json/wp/v2/pages/2';
     fetch(dataURL).then(res => res.json()).then(res => {
       this.setState({
         loaded: true,

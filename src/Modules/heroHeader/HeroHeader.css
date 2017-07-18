@@ -1,22 +1,33 @@
 .heroHeader {
-	width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .heroHeader h2 {
-	margin: 0 0 20px 0;
-    font-size: 3rem;
-    line-height: 1.4em;
-    font-weight: 400;
-    color: #ACE0EB;
-    letter-spacing: 1.25px;
+  margin: 0 0 20px 0;
+  font-size: 3rem;
+  line-height: 1.4em;
+  font-weight: 400;
+  color: #ace0eb;
+  letter-spacing: 1.25px;
 }
 
 .heroHeader button {
-	position: relative;
-	top: -80px;
+  position: relative;
+  top: -80px;
+}
+
+.videoContent {
+  position: relative;
+  top: 28px;
+  margin: 0 auto 0;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .44);
 }
