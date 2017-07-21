@@ -6,6 +6,7 @@ import ValueBlock from '../../Modules/ValueBlock';
 import NavBar from '../../Modules/NavBar';
 import BoxContent from '../../Modules/BoxContent';
 import Quote from '../../Components/Quote';
+import TalkToUs from '../../Modules/TalkToUs';
 
 class Homepage extends Component {
   constructor() {
@@ -123,6 +124,7 @@ class Homepage extends Component {
             name={this.state.quoteName}
             role={this.state.quoteRole}
           />
+          <TalkToUs />
         </div>
       );
     } else {

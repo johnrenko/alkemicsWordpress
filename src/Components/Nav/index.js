@@ -13,7 +13,7 @@ class Nav extends Component {
       ['For brands', '/brands'],
       ['Customers', '/customers'],
       ['Partners', '/partners'],
-      ['Log in', '/login'],
+      ['Log in', 'http'],
     ],
   };
 

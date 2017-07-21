@@ -1,22 +1,26 @@
 .input {
-    margin: 0 14px 0 0;
-    width: 310px;
-    height: 55px;
+  margin: 0 14px 0 0;
+  width: 310px;
+  height: 55px;
 }
 
-input {    
-    padding: 0 24px;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #EFEFF3;
-    -webkit-border-radius: 28px;
-    -moz-border-radius: 28px;
-    border-radius: 28px;
-    font-family: Roboto,'Arial CE',Arial,sans-serif;
-    font-size: 17px;
-    font-size: 1.7rem;
-    line-height: 52px;
-    font-weight: 400;
-    color: #3C3C3B;
-    outline: 0;
+input {
+  padding: 0 24px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #efeff3;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  font-family: Roboto, 'Arial CE', Arial, sans-serif;
+  font-size: 17px;
+  font-size: 1.7rem;
+  line-height: 52px;
+  font-weight: 400;
+  color: #3c3c3b;
+  outline: 0;
+}
+
+input:focus {
+  border-color: #3fa2b2;
 }

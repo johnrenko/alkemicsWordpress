@@ -1,0 +1,15 @@
+.TalkToUs {
+  display: flex;
+  max-width: 1220px;
+  margin: auto;
+  padding: 85px 0 80px 0;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.TalkToUs h1 {
+  color: #3c3c3b;
+  font-size: 3.6rem;
+  line-height: 1.8;
+  margin: 0;
+}
