@@ -7,6 +7,7 @@ import NavBar from '../../Modules/NavBar';
 import BoxContent from '../../Modules/BoxContent';
 import Quote from '../../Components/Quote';
 import TalkToUs from '../../Modules/TalkToUs';
+import Footer from '../../Modules/Footer';
 
 class Homepage extends Component {
   constructor() {
@@ -125,6 +126,7 @@ class Homepage extends Component {
             role={this.state.quoteRole}
           />
           <TalkToUs />
+          <Footer />
         </div>
       );
     } else {

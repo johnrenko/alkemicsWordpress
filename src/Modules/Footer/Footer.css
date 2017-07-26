@@ -1,0 +1,98 @@
+Footer {
+  background: #f3f4f6;
+  padding: 60px 0;
+  font-weight: 400;
+}
+
+.in {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1140px;
+  padding: 0 40px;
+  margin: auto;
+}
+
+.footer-nav {
+  display: flex;
+}
+
+.footer-about {
+  max-width: 330px;
+}
+
+.footer-about p {
+  font-size: 1.5rem;
+  line-height: 28px;
+  color: #75798a;
+}
+
+.footer-nav {
+  min-width: 120px;
+}
+
+.footer-nav-item {
+  min-width: 120px;
+  font-size: 1.5rem;
+}
+.footer-nav-item h2 {
+  margin: 0 0 45px 0;
+  font-size: 2rem;
+  line-height: 32px;
+  color: #3c3c3b;
+}
+
+.footer-nav-item ul {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.social-list {
+  flex-direction: inherit;
+  min-width: 200px;
+}
+
+.footer-nav-item ul.social-list li {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 55px;
+  width: 55px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.footer-nav-item ul.social-list li:hover {
+  transition: height .3s;
+  transition: width .3s;
+  height: 60px;
+  width: 60px;
+  margin-top: -2.5px;
+}
+
+.footer-nav-item ul.social-list a {
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.footer-nav-item ul li {
+  padding: 0;
+  width: 100%;
+  margin: 0 0 5px 0;
+  color: #75798a;
+}
+
+.footer-nav-item ul li a {
+  display: flex;
+  color: #75798a;
+  text-decoration: none;
+  line-height: 28px;
+}
+
+.footer-nav-item ul li a:hover {
+  text-decoration: underline;
+  text-decoration-skip: ink;
+  color: #3c3c3b;
+}
