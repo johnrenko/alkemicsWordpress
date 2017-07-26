@@ -5,6 +5,7 @@ import HeroHeader from '../../Modules/HeroHeader';
 import ImgBanner from '../../Components/ImgBanner';
 import ValueBlock from '../../Modules/ValueBlock';
 import NavBar from '../../Modules/NavBar';
+import Footer from '../../Modules/Footer';
 
 class Brands extends Component {
   constructor() {
@@ -102,6 +103,7 @@ class Brands extends Component {
           blocksToRender={this.state.blockContent}
           cta2={this.state.infoblock_cta}
         />
+        <Footer />
       </div>
     );
   }
