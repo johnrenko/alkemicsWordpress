@@ -1,24 +1,24 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
-import "./Input.css";
-import classNames from "classnames";
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import './Input.css';
+import classNames from 'classnames';
 
 class Input extends Component {
-	static propTypes = {
-		placeholder: PropTypes.string
-	};
+  static propTypes = {
+    placeholder: PropTypes.string,
+  };
 
-	static defaultProps = {};
+  static defaultProps = {};
 
-	render() {
-		const { placeholder } = this.props;
+  render() {
+    const { placeholder } = this.props;
 
-		return (
-			<div className="input">
-				<input placeholder={placeholder} />
-			</div>
-		);
-	}
+    return (
+      <div className="input">
+        <input placeholder={placeholder} />
+      </div>
+    );
+  }
 }
 
 export default Input;

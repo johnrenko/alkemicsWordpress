@@ -1,9 +1,9 @@
 .TalkToUs {
   display: flex;
-  max-width: 1220px;
+  max-width: 1140px;
   margin: auto;
-  padding: 85px 0 80px 0;
-  justify-content: space-around;
+  padding: 85px 40px 80px 40px;
+  justify-content: space-between;
   align-content: center;
 }
 
@@ -12,4 +12,13 @@
   font-size: 3.6rem;
   line-height: 1.8;
   margin: 0;
+}
+
+.TalkToUs__name {
+  margin-left: 100px;
+}
+
+.TalkToUs__button button {
+  min-width: 55px;
+  padding: 0;
 }

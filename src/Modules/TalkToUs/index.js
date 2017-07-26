@@ -10,9 +10,15 @@ class TalkToUs extends Component {
     return (
       <div className="TalkToUs">
         <h1>Talk to Us!</h1>
-        <Input placeholder="Your Name" />
-        <Input placeholder="E-mail" />
-        <Button content="send" onClick={() => console.log('toto')} primary />
+        <div className="TalkToUs__name">
+          <Input placeholder="Your Name" />
+        </div>
+        <div className="TalkToUs__email">
+          <Input placeholder="E-mail" />
+        </div>
+        <div className="TalkToUs__button">
+          <Button content="->" onClick={() => console.log('toto')} primary />
+        </div>
       </div>
     );
   }
