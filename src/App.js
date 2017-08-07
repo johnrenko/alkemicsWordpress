@@ -4,6 +4,7 @@ import './App.css';
 
 import Homepage from './Views/Homepage';
 import Brands from './Views/Brands';
+import Customers from './Views/Customers';
 
 class App extends Component {
   render() {
@@ -13,12 +14,15 @@ class App extends Component {
     const brands = () => {
       return <Brands />;
     };
+    const customers = () => {
+      return <Customers />;
+    };
     return (
       <Router>
         <div>
           <Route exact path="/" component={home} />
-          <Route exact path="/front-website" component={home} />
           <Route path="/brands" component={brands} />
+          <Route path="/customers" component={customers} />
         </div>
       </Router>
     );

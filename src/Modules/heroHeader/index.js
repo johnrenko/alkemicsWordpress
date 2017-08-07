@@ -17,8 +17,6 @@ class HeroHeader extends Component {
   static defaultProps = {
     title: 'The Collaboration Platform for Retail',
     subtitle: 'Connecting every brand with every retailer',
-    heroImage:
-      'http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/hp-img.svg',
     ctaText: null,
     ctaLink: '',
   };
@@ -30,14 +28,18 @@ class HeroHeader extends Component {
   }
 
   renderImage(url) {
-    if (url.includes('youtube')) {
-      return (
-        <div className="videoContent">
-          <ReactPlayer url={url} width="900px" height="506px" />
-        </div>
-      );
+    if (url) {
+      if (url.includes('youtube')) {
+        return (
+          <div className="videoContent">
+            <ReactPlayer url={url} width="900px" height="506px" />
+          </div>
+        );
+      } else {
+        return <img src={url} alt="" />;
+      }
     } else {
-      return <img src={url} alt="" />;
+      return null;
     }
   }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Brands.css';
+import './Customers.css';
 
 import HeroHeader from '../../Modules/HeroHeader';
 import ImgBanner from '../../Components/ImgBanner';
@@ -90,11 +90,7 @@ class Brands extends Component {
       <div>
         <div className="NavHeader">
           <NavBar />
-          <HeroHeader
-            title={this.state.title}
-            subtitle={this.state.subtitle}
-            heroImage={this.state.heroImage}
-          />
+          <HeroHeader title={this.state.title} subtitle={this.state.subtitle} />
         </div>
         <div className="ImgBanner">
           <ImgBanner imgs={this.state.boxImgs} />
