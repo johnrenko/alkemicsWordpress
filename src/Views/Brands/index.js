@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import './Brands.css';
 
+import NavBar from '../../Modules/NavBar';
 import HeroHeader from '../../Modules/HeroHeader';
 import ImgBanner from '../../Components/ImgBanner';
 import ValueBlock from '../../Modules/ValueBlock';
-import NavBar from '../../Modules/NavBar';
+import AppStore from '../../Modules/AppStore';
+import BoxContent from '../../Modules/BoxContent';
+import Quote from '../../Components/Quote';
 import TalkToUs from '../../Modules/TalkToUs';
 import Footer from '../../Modules/Footer';
 
@@ -79,8 +82,25 @@ class Brands extends Component {
             },
           ],
         },
-        valueTitle: res.acf.block_2_title,
+        valueTitle: res.acf.infoblock_main_title,
         infoblock_cta: res.acf.infoblock_cta,
+        appstoreTitle: res.acf.appstore_title,
+        appstoreSubtitle: res.acf.appstore_subtitle,
+        appstoreImages1: [
+          res.acf.appstore_image_1,
+          res.acf.appstore_image_2,
+          res.acf.appstore_image_3,
+          res.acf.appstore_image_4,
+        ],
+        appstoreImages2: [
+          res.acf.appstore_image_5,
+          res.acf.appstore_image_6,
+          res.acf.appstore_image_7,
+        ],
+        quoteContent: res.acf.quote,
+        quotepic: res.acf.quote_image,
+        quoteName: res.acf.quote_name,
+        quoteRole: res.acf.quote_title,
       });
     });
   }
@@ -103,6 +123,26 @@ class Brands extends Component {
           valueTitle={this.state.valueTitle}
           blocksToRender={this.state.blockContent}
           cta2={this.state.infoblock_cta}
+        />
+        <AppStore
+          title={this.state.appstoreTitle}
+          subtitle={this.state.appstoreSubitle}
+          cta={this.state.appstoreCta}
+          images1={this.state.appstoreImages1}
+          images2={this.state.appstoreImages2}
+        />
+        <BoxContent
+          title={this.state.boxTitle}
+          content={this.state.boxContent}
+          mainCTA={this.state.boxMainCTA}
+          secondCTA={this.state.boxSecondCTA}
+          imgs={this.state.boxImgs}
+        />
+        <Quote
+          quote={this.state.quoteContent}
+          pic={this.state.quotepic}
+          name={this.state.quoteName}
+          role={this.state.quoteRole}
         />
         <TalkToUs />
         <Footer />

@@ -1,0 +1,35 @@
+.appstore__container {
+  border-top: 1px solid #d3d3d3;
+  max-width: 1140px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.appstore__container h1 {
+  margin: 80px 0 50px 0;
+  font-size: 3.6rem;
+  line-height: 1.1em;
+  font-weight: 300;
+  color: #3c3c3b;
+  letter-spacing: 1px;
+}
+
+.appstore__container p {
+  margin: 0 auto 50px;
+  max-width: 620px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 2em;
+  font-weight: 300;
+  color: #75798a;
+}
+
+.appstore__container .images {
+  margin-bottom: 30px;
+}
+
+.appstore__container .images__3 {
+  max-width: 860px;
+  margin: auto;
+}

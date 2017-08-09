@@ -19,7 +19,6 @@ class BoxContent extends Component {
     content:
       'Over 2700 Brands use Alkemics to collaborate and share product data with retailers',
     mainCTA: 'Been Invited?',
-    secondCTA: 'Find Out More',
     imgs: [
       'http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-auchan.png',
       'http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-carrefour.png',
@@ -29,6 +28,19 @@ class BoxContent extends Component {
       'http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/logo-walmart.png',
     ],
   };
+
+  renderButton(a, b) {
+    if (b) {
+      return (
+        <span>
+          <Button content={a} primary />
+          <Button content={b} secondary />
+        </span>
+      );
+    } else {
+      return <Button content={a} primary />;
+    }
+  }
 
   render() {
     const { title, content, mainCTA, secondCTA, imgs } = this.props;
@@ -42,8 +54,7 @@ class BoxContent extends Component {
             {content}
           </p>
           <div className="boxContent__buttons">
-            <Button content={mainCTA} primary />
-            <Button content={secondCTA} secondary />
+            {this.renderButton(mainCTA, secondCTA)}
           </div>
         </div>
         <div className="boxContent__bottom">
