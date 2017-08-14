@@ -127,7 +127,7 @@ class Brands extends Component {
         />
         <AppStore
           title={this.state.appstoreTitle}
-          subtitle={this.state.appstoreSubitle}
+          subtitle={this.state.appstoreSubtitle}
           cta={this.state.appstoreCta}
           images1={this.state.appstoreImages1}
           images2={this.state.appstoreImages2}

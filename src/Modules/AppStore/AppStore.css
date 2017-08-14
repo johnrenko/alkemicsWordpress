@@ -33,3 +33,7 @@
   max-width: 860px;
   margin: auto;
 }
+
+.appstore__container .selector {
+  margin-top: 80px;
+}

@@ -15,7 +15,6 @@ class AppStore extends Component {
   };
 
   static defaultProps = {
-    title: 'Power your Product Data with the Alkemics AppStore',
     images1: [
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-auchan.png',
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-carrefour.png',
@@ -33,6 +32,14 @@ class AppStore extends Component {
     return value ? <Button content={value} primary /> : null;
   }
 
+  renderTitle(value) {
+    return value
+      ? <h1>
+          {value}
+        </h1>
+      : <div className="selector" />;
+  }
+
   renderSubtitle(value) {
     return value
       ? <p>
@@ -44,12 +51,8 @@ class AppStore extends Component {
   render() {
     return (
       <div className="appstore__container">
-        <h1>
-          {this.props.title}
-        </h1>
-        <p>
-          {this.renderSubtitle(this.props.subtitle)}
-        </p>
+        {this.renderTitle(this.props.title)}
+        {this.renderSubtitle(this.props.subtitle)}
         <div className="images">
           <ImgBanner imgs={this.props.images1} />
           <div className="images__3">
