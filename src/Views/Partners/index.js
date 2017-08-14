@@ -8,23 +8,42 @@ import TalkToUs from '../../Modules/TalkToUs';
 import Footer from '../../Modules/Footer';
 
 class Partners extends Component {
+  constructor() {
+    super();
+    this.state = {
+      title: '',
+      subtitle: '',
+      content: '',
+      logoTitle: '',
+      logos: [],
+    };
+  }
+
+  componentDidMount() {
+    let dataURL =
+      'http://www.techalkemics.odns.fr/wordpress_back/wp-json/wp/v2/pages/109';
+    fetch(dataURL).then(res => res.json()).then(res => {
+      this.setState({
+        title: res.acf.title,
+        subtitle: res.acf.subtitle,
+        content: res.acf.content,
+        logoTitle: res.acf.logo_title,
+        logos: [],
+      });
+    });
+  }
+
   render() {
     return (
       <div className="partners">
         <div className="NavHeader">
           <NavBar />
-          <HeroHeader />
+          <HeroHeader title={this.state.title} subtitle={this.state.subtitle} />
         </div>
         <p>
-          La digitalisation des métiers et des outils demande aux marques de
-          charger et maintenir à jour leurs données produits dans une multitude
-          de systèmes. L’app store de la plateforme Alkemics apporte plus
-          d’agilité aux marques en regroupant des applications et services
-          nativement intégrés avec Alkemics qui permettent d’automatiser le
-          chargement et la récupération des données produits. Innover avec le
-          digital devient plus simple, plus rapide.
+          {this.state.content}
         </p>
-        <AppStore />
+        <AppStore title={this.state.logoTitle} />
         <TalkToUs />
         <Footer />
       </div>
