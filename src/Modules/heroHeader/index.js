@@ -39,7 +39,7 @@ class HeroHeader extends Component {
         return <img src={url} alt="" />;
       }
     } else {
-      return null;
+      return <div className="separator" />;
     }
   }
 
