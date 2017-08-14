@@ -29,8 +29,11 @@ class AppStore extends Component {
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-carrefour.png',
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-casino.png',
     ],
-    cta: 'Show all integrations',
   };
+
+  renderButton(value) {
+    return value ? <Button content={value} primary /> : null;
+  }
 
   render() {
     return (
@@ -47,7 +50,7 @@ class AppStore extends Component {
             <ImgBanner imgs={this.props.images2} />
           </div>
         </div>
-        <Button content={this.props.cta} primary />
+        {this.renderButton(this.props.cta)}
       </div>
     );
   }

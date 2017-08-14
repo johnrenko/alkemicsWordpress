@@ -97,6 +97,7 @@ class Brands extends Component {
           res.acf.appstore_image_6,
           res.acf.appstore_image_7,
         ],
+        appstoreCta: res.acf.appstore_CTA,
         quoteContent: res.acf.quote,
         quotepic: res.acf.quote_image,
         quoteName: res.acf.quote_name,
