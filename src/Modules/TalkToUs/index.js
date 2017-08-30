@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Button from '../../Components/Button';
+import arrow from './img/ico-arrow-right.svg';
+import check from './img/ico-check.svg';
 
 import './TalkToUs.css';
 
@@ -66,10 +68,13 @@ class TalkToUs extends Component {
   }
 
   renderButton() {
+    const contentArrow = <img src={arrow} alt="Send" />;
+    const contentSent = <img src={check} alt="Sent" />;
+
     return this.state.send ? (
-      <Button content="Sent" onClick={this.onClickSend} disabled />
+      <Button content={contentSent} onClick={this.onClickSend} disabled />
     ) : (
-      <Button content="->" onClick={this.onClickSend} primary />
+      <Button content={contentArrow} onClick={this.onClickSend} primary />
     );
   }
 

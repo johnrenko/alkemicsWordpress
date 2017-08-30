@@ -6,7 +6,7 @@ import classNames from 'classnames';
 class Button extends Component {
   static propTypes = {
     onClick: PropTypes.func,
-    content: PropTypes.string,
+    content: PropTypes.node,
     primary: PropTypes.bool,
     secondary: PropTypes.bool,
     disabled: PropTypes.bool,

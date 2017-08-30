@@ -19,6 +19,7 @@
 }
 
 .TalkToUs__button button {
+  position: relative;
   min-width: 55px;
   padding: 0;
 }
@@ -47,4 +48,23 @@ input {
 
 input:focus {
   border-color: #3fa2b2;
+}
+
+.TalkToUs img {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+}
+
+.TalkToUs .btn.disabled {
+  background: transparent;
+  border: 1px solid #48b071;
+  cursor: initial;
+}
+
+.TalkToUs .btn.disabled img {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 25px;
 }
