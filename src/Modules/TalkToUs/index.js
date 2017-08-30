@@ -1,11 +1,23 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Button from '../../Components/Button';
-import Input from '../../Components/Input';
 
 import './TalkToUs.css';
 
 class TalkToUs extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: '',
+      email: '',
+      sent: false,
+    };
+    this.onChangeName = this.onChangeName.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
+    this.postForm = this.postForm.bind(this);
+    this.onClickSend = this.onClickSend.bind(this);
+  }
+
   postForm(name, email) {
     const formData = 'entry.1939990031=' + name + '&entry.1316084385=' + email;
 
@@ -23,8 +35,42 @@ class TalkToUs extends Component {
     );
   }
 
-  onChange() {
-    console.log('toto');
+  onChangeName(e) {
+    this.setState({
+      name: e.target.value,
+    });
+  }
+
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value,
+    });
+  }
+
+  onClickSend() {
+    this.state.name === '' || this.state.email === ''
+      ? null
+      : this.postForm(this.state.name, this.state.email);
+    this.setState({
+      name: '',
+      email: '',
+      send: true,
+    });
+    setTimeout(
+      () =>
+        this.setState({
+          send: false,
+        }),
+      3000
+    );
+  }
+
+  renderButton() {
+    return this.state.send ? (
+      <Button content="Sent" onClick={this.onClickSend} disabled />
+    ) : (
+      <Button content="->" onClick={this.onClickSend} primary />
+    );
   }
 
   render() {
@@ -32,18 +78,20 @@ class TalkToUs extends Component {
       <div className="TalkToUs">
         <h1>Talk to Us!</h1>
         <div className="TalkToUs__name">
-          <Input placeholder="Your Name" onChange={this.onChange} />
-        </div>
-        <div className="TalkToUs__email">
-          <Input placeholder="E-mail" />
-        </div>
-        <div className="TalkToUs__button">
-          <Button
-            content="->"
-            onClick={() => this.postForm('a', 'c')}
-            primary
+          <input
+            placeholder="Name"
+            onChange={this.onChangeName}
+            value={this.state.name}
           />
         </div>
+        <div className="TalkToUs__email">
+          <input
+            placeholder="E-mail"
+            onChange={this.onChangeEmail}
+            value={this.state.email}
+          />
+        </div>
+        <div className="TalkToUs__button">{this.renderButton()}</div>
       </div>
     );
   }
