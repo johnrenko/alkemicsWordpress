@@ -33,6 +33,7 @@ class App extends Component {
           <Route path="/brands" component={brands} />
           <Route path="/customers" component={customers} />
           <Route path="/partners" component={partners} />
+          <Route path="/article" component={article} />
         </div>
       </Router>
     );

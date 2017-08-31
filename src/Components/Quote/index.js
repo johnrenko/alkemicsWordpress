@@ -8,33 +8,27 @@ class Quote extends Component {
     pic: PropTypes.string,
     name: PropTypes.string,
     role: PropTypes.string,
+    bg: PropTypes.bool,
   };
 
   static defaultProps = {
-    quote:
-      'Alkemics offers an intuitive solution that automates the exchange of information between retailers and brands and allows us to broadcast our product sheet updates in real-time.',
-    pic:
-      'http://www.techalkemics.odns.fr/wp-content/uploads/2017/07/user-2.png',
-    name: 'Benjamin Coyot',
-    role: 'E-Merchandising Manager, AuchanDrive',
+    bg: true,
   };
+
   render() {
-    const { quote, pic, name, role } = this.props;
+    const { quote, pic, name, role, bg } = this.props;
+
+    const backGround = bg ? 'QuoteBlock' : 'QuoteBlock generic';
+
     return (
-      <div className="QuoteBlock">
+      <div className={backGround}>
         <div className="QuoteBlock__content">
-          <p className="Quote">
-            {quote}
-          </p>
+          <p className="Quote">{quote}</p>
           <div className="Quote Quote__Quoter">
             <img src={pic} />
             <div className="Quote__Quoter__Content">
-              <p className="Quote__Name">
-                {name}
-              </p>
-              <p className="Quote__Role">
-                {role}
-              </p>
+              <p className="Quote__Name">{name}</p>
+              <p className="Quote__Role">{role}</p>
             </div>
           </div>
         </div>

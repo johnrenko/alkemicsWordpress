@@ -8,8 +8,6 @@ class Input extends Component {
     placeholder: PropTypes.string,
   };
 
-  static defaultProps = {};
-
   render() {
     const { placeholder } = this.props;
 
