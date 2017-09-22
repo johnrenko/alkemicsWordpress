@@ -10,7 +10,6 @@
   "dependencies": {
     "axios": "^0.16.2",
     "classnames": "^2.2.5",
-    "express": "~4.15.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-player": "~0.19.1",
