@@ -15,9 +15,6 @@ class AppStore extends Component {
   };
 
   static defaultProps = {
-    title: 'Power your Product Data with the Alkemics AppStore',
-    subtitle:
-      'Supercharge your product data in just a few clicks by connecting Alkemics with the sales and marketing tools you already use!',
     images1: [
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-auchan.png',
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-carrefour.png',
@@ -29,25 +26,40 @@ class AppStore extends Component {
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-carrefour.png',
       'http://www.techalkemics.odns.fr/wordpress_back/wp-content/uploads/2017/07/logo-casino.png',
     ],
-    cta: 'Show all integrations',
   };
+
+  renderButton(value) {
+    return value ? <Button content={value} primary /> : null;
+  }
+
+  renderTitle(value) {
+    return value
+      ? <h1>
+          {value}
+        </h1>
+      : <div className="selector" />;
+  }
+
+  renderSubtitle(value) {
+    return value
+      ? <p>
+          {value}
+        </p>
+      : null;
+  }
 
   render() {
     return (
       <div className="appstore__container">
-        <h1>
-          {this.props.title}
-        </h1>
-        <p>
-          {this.props.subtitle}
-        </p>
+        {this.renderTitle(this.props.title)}
+        {this.renderSubtitle(this.props.subtitle)}
         <div className="images">
           <ImgBanner imgs={this.props.images1} />
           <div className="images__3">
             <ImgBanner imgs={this.props.images2} />
           </div>
         </div>
-        <Button content={this.props.cta} primary />
+        {this.renderButton(this.props.cta)}
       </div>
     );
   }

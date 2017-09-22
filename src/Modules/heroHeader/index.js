@@ -21,9 +21,9 @@ class HeroHeader extends Component {
     ctaLink: '',
   };
 
-  renderButton(bool) {
-    if (bool) {
-      return <Button content={bool} primary />;
+  renderButton(value) {
+    if (value) {
+      return <Button content={value} primary />;
     }
   }
 

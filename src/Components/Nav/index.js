@@ -13,24 +13,34 @@ class Nav extends Component {
       ['For brands', '/brands'],
       ['Customers', '/customers'],
       ['Partners', '/partners'],
-      ['Log in', 'http'],
+      ['Log in', '/login'],
     ],
   };
 
-  render() {
-    const { links } = this.props;
-    const nav = links.map(a =>
+  renderLink(a) {
+    return a[0] === 'Log in' ? (
       <li key={a[0]}>
-        <Link to={a[1]}>
+        <a
+          href="https://stream.alkemics.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {a[0]}
-        </Link>
+        </a>
+      </li>
+    ) : (
+      <li key={a[0]}>
+        <Link to={a[1]}>{a[0]}</Link>
       </li>
     );
+  }
+
+  render() {
+    const { links } = this.props;
+    const nav = links.map(a => this.renderLink(a));
     return (
       <div>
-        <ul className="nav">
-          {nav}
-        </ul>
+        <ul className="nav">{nav}</ul>
       </div>
     );
   }

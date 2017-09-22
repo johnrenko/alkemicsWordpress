@@ -13,36 +13,37 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
-	font-weight: 300;
+h1,
+h2,
+h3 {
+  font-weight: 300;
 }
 
 h1 {
-	margin: 0 0 5px 0;
-    font-size: 4.8rem;
-    line-height: 1.1em;
-    font-weight: 300;
-    color: #fff;
-    letter-spacing: 1px;
+  margin: 0 0 5px 0;
+  font-size: 4.8rem;
+  line-height: 1.1em;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
 h2 {
-	font-size: 2.4rem;
-	color: #3C3C3B;
-	line-height: 1.2em;
+  font-size: 2.4rem;
+  color: #3c3c3b;
+  line-height: 1.2em;
 }
 
 ul {
-	padding: 0;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-around;
-	max-width: 1140px;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1140px;
 }
 
 li {
-	list-style-type: none;
-	padding: 0 15px;
-	margin: 0 0 45px 0;
-	width: 25%;
+  list-style-type: none;
+  padding: 0 15px;
+  margin: 0 0 45px 0;
 }

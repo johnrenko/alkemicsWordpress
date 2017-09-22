@@ -97,6 +97,7 @@ class Brands extends Component {
           res.acf.appstore_image_6,
           res.acf.appstore_image_7,
         ],
+        appstoreCta: res.acf.appstore_CTA,
         quoteContent: res.acf.quote,
         quotepic: res.acf.quote_image,
         quoteName: res.acf.quote_name,
@@ -126,7 +127,7 @@ class Brands extends Component {
         />
         <AppStore
           title={this.state.appstoreTitle}
-          subtitle={this.state.appstoreSubitle}
+          subtitle={this.state.appstoreSubtitle}
           cta={this.state.appstoreCta}
           images1={this.state.appstoreImages1}
           images2={this.state.appstoreImages2}

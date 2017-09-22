@@ -1,0 +1,9 @@
+.partners p {
+  margin: 60px auto 50px;
+  max-width: 740px;
+  font-weight: 300;
+  color: #75798a;
+  font-size: 1.8rem;
+  line-height: 2em;
+  text-align: left;
+}

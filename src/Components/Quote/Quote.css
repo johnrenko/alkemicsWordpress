@@ -4,6 +4,11 @@
   background-image: linear-gradient(to bottom right, #3fa2b2 0, #166a83 100%);
 }
 
+.QuoteBlock.generic {
+  background: inherit;
+  background-image: none;
+}
+
 .QuoteBlock__content {
   max-width: 1220px;
   padding: 0px 40px;
@@ -19,6 +24,10 @@
   font-weight: 300;
   color: #fff;
   letter-spacing: 1px;
+}
+
+.QuoteBlock.generic .Quote {
+  color: inherit;
 }
 
 .Quote__Quoter {
