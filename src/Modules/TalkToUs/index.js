@@ -87,6 +87,7 @@ class TalkToUs extends Component {
             placeholder="Name"
             onChange={this.onChangeName}
             value={this.state.name}
+            id="nameTalkToUs"
           />
         </div>
         <div className="TalkToUs__email">

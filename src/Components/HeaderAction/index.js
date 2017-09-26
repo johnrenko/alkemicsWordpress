@@ -24,6 +24,13 @@ class HeaderAction extends Component {
         });
   }
 
+  scroll() {
+    document.querySelector('.TalkToUs').scrollIntoView({
+      behavior: 'smooth',
+    });
+    setTimeout(() => document.querySelector('#nameTalkToUs').focus(), 800);
+  }
+
   render() {
     const { button_1, button_2 } = this.state;
     return (
@@ -31,7 +38,7 @@ class HeaderAction extends Component {
         <a className="language" onClick={this.onClick}>
           {button_1}
         </a>
-        <a className="" onClick={null}>
+        <a className="" onClick={this.scroll}>
           {button_2}
         </a>
       </div>
